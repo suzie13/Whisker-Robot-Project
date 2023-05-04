@@ -1,7 +1,7 @@
 import cv2
 import time
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 interval = 5 # interval in seconds
 counter = 0 # initialize the counter
 
