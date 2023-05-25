@@ -33,4 +33,35 @@
 ![Screenshot from 2023-05-10 19-42-01](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/48aedbd8-3197-4e83-a09e-d9b8ac97ae29)
 
 
+## Output from show_marker.py for Front Cam and Top Cam
 
+
+
+
+
+## Output from real_world_coordinates_cam1.py 
+
+
+
+
+## Command to run multiple files in parallel/ to sync cameras/data collection: ####
+
+
+
+# Making use of GNU Parallel command-line tool
+# sudo apt-get install parallel
+
+# Camera 1 (Top Camera)
+python3 real_world_coordinates_cam1.py  #get coordinates
+
+# Camera 2 (Front Exterior Camera)
+python3 real_world_coordinates_cam2.py  #get coordinates
+
+# Interior Cam
+python3 interior_camprocessor.py  #collect images
+
+# To sync data collection from all three cameras
+parallel -j 3 python3 ::: real_world_coordinates_cam1.py real_world_coordinates_cam2.py interior_camprocessor.py
+
+
+### 3 stands for 3 jobs to start simultaneosly/concurrently
