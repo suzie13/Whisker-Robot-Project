@@ -35,12 +35,17 @@
 
 ## Output from show_marker.py for Front Cam and Top Cam
 
+![Screenshot from 2023-05-25 03-02-28](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/1f79e9df-57e9-401e-aa24-b2130fa43ee8)
 
+![Screenshot from 2023-05-25 03-00-30](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/d63b08b4-455d-4610-bf00-a627179d9566)
+
+![Screenshot from 2023-05-24 20-24-10](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/c87a5836-ffa0-457b-9dae-0f267173b760)
 
 
 
 ## Output from real_world_coordinates_cam1.py 
 
+![Screenshot from 2023-05-23 21-35-02](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/393ff659-fecd-456b-9fd4-af9a6bea8683)
 
 
 
@@ -64,4 +69,4 @@ python3 interior_camprocessor.py  #collect images
 parallel -j 3 python3 ::: real_world_coordinates_cam1.py real_world_coordinates_cam2.py interior_camprocessor.py
 
 
-### 3 stands for 3 jobs to start simultaneosly/concurrently
+### 3 stands for 3 jobs to start simultaneosly/ run concurrently
