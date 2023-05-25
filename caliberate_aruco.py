@@ -10,19 +10,29 @@ root = Path(__file__).parent.absolute()
 # Set this flag True for calibrating camera and False for validating results real time
 calibrate_camera = True
 
-calib_imgs_path = root.joinpath("chessboard")
+calib_imgs_path = root.joinpath("chessboard_9_new")
+
+# for idx, fn in enumerate(calib_fnms):
+#     print(idx, '', end='')
+#     img = cv2.imread(str(root.joinpath(fn)))
+#     if img is not None:
+#         img_list.append(img)
+#         h, w, c = img.shape
+#     else:
+#         print(f"Failed to load image: {fn}")
 
 # For validating results, show aruco board to camera.
 aruco_dict = aruco.getPredefinedDictionary( aruco.DICT_6X6_1000 )
 
 #Provide length of the marker's side
-markerLength = 3.75  # cm
+markerLength = 3.95#0.95 #3.95 #3.75  # cm ##check looks like 3.9 ish #3.95
 
 # Provide separation between markers
-markerSeparation = 0.5   # cm.
+markerSeparation =  0.5#0.15 #0.5   # cm. ##seems right
 
 # create arUco board
 board = aruco.GridBoard_create(4, 5, markerLength, markerSeparation, aruco_dict)
+# board = aruco.GridBoard_create(4, 2, markerLength, markerSeparation, aruco_dict)
 
 
 arucoParams = aruco.DetectorParameters_create()
@@ -34,8 +44,16 @@ if calibrate_camera == True:
     for idx, fn in enumerate(calib_fnms):
         print(idx, '', end='')
         img = cv2.imread( str(root.joinpath(fn) ))
+        # if img is not None:
+        #     img_list.append(img)
+        #     h, w, c = img.shape
+        # else:
+        #     print(f"Failed to load image: {fn}")
+        # print("hello")
         img_list.append( img )
+        # print("hello2")
         h, w, c = img.shape
+        # print("hello3")
     print('Calibration images')
 
     counter, corners_list, id_list = [], [], []
@@ -57,16 +75,19 @@ if calibrate_camera == True:
     print ("Calibrating camera .... Please wait...")
     ret, mtx, dist, rvecs, tvecs = aruco.calibrateCameraAruco(corners_list, id_list, counter, board, img_gray.shape, None, None )
 
-    print("Camera matrix is \n", mtx, "\n And is stored in calibration.yaml file along with distortion coefficients : \n", dist)
+    print("Camera matrix is \n", mtx, "\n And is stored in calibration11.yaml file along with distortion coefficients : \n", dist)
     data = {'camera_matrix': np.asarray(mtx).tolist(), 'dist_coeff': np.asarray(dist).tolist()}
-    with open("calibration.yaml", "w") as f:
+    with open("calibration11.yaml", "w") as f:
         yaml.dump(data, f)
 
 else:
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture(6) # 0 = laptop webcam; 12 = Front exterior camera; 6 = Top Camera; ? = Interior Camera
     ret, img = camera.read()
 
-    with open('calibration.yaml') as f:
+    # with open('calibration.yaml') as f: #laptop webcam
+    # with open('calibration3.yaml') as f: #Top Camera
+    # with open('calibration4.yaml') as f: #Interior Camera
+    with open('calibration11.yaml') as f: #front exterior camera
         loadeddict = yaml.load(f)
     mtx = loadeddict.get('camera_matrix')
     dist = loadeddict.get('dist_coeff')

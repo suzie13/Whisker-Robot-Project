@@ -4,11 +4,13 @@
 
 import cv2
 
-camera = cv2.VideoCapture(0)
+# camera = cv2.VideoCapture(0)
+# camera = cv2.VideoCapture(6) #Top Camera
+camera = cv2.VideoCapture(6)
 ret, img = camera.read()
 
 
-path = "/home/sushma/Downloads/chessboard/"
+path = "/home/sushma/Downloads/Whisker-Robot-Project/chessboard_9_new/"
 count = 0
 while True:
     name = path + str(count)+".jpg"

@@ -52,7 +52,9 @@ if __name__ == "__main__" :
     parameters = aruco.DetectorParameters_create()
 
     # parameter
-    cameraID = 0
+    # cameraID = 0
+    # cameraID = 6
+    cameraID = 12
     cam0_mark_search = MarkSearch(cameraID)
 
     markID = 1
