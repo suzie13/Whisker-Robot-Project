@@ -17,14 +17,14 @@ aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
 marker_size = 2.6  # or 2.61
 
 # File path to save the coordinates
-output_file = 'marker_coordinates_1.csv'
+output_file = 'marker_coords_1.csv'
 
 # Function to calculate marker pose
 def estimate_marker_pose(marker_corners):
     rvecs, tvecs, _ = cv2.aruco.estimatePoseSingleMarkers(marker_corners, marker_size, camera_matrix, dist_coeffs)
     return rvecs, tvecs
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(6)
 
 # Open the output file for writing
 with open(output_file, mode='w', newline='') as file:
@@ -33,8 +33,10 @@ with open(output_file, mode='w', newline='') as file:
     writer.writerow(['Timestamp', 'Marker ID', 'Position (x)', 'Position (y)', 'Position (z)', 'direction', 'x-step'])
 
     # Prompt the user to input direction and x-step values
-    direction = input("Enter the direction (default: left): ") or direction_default
-    x_step = input("Enter the x-step (default: 200): ") or x_step_default
+    # direction = input("Enter the direction (default: left): ") or direction_default
+    direction = direction_default
+    # x_step = input("Enter the x-step (default: 200): ") or x_step_default
+    x_step = x_step_default
 
     while True:
         # Read frame from the camera

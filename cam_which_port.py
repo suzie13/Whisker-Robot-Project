@@ -9,3 +9,4 @@ for camera_idx in range(20):
         print(f'Camera index available: {camera_idx}')
         all_camera_idx_available.append(camera_idx)
         cap.release()
+print(all_camera_idx_available)

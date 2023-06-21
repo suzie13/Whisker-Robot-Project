@@ -3,7 +3,7 @@ import time
 import os
 from datetime import datetime
 
-cap = cv2.VideoCapture(14)
+cap = cv2.VideoCapture(8)
 interval = 0.04  # interval in seconds (25 frames per second)(25Hz)
 counter = 0  # initialize the counter
 
