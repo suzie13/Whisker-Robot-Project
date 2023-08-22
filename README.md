@@ -1,18 +1,15 @@
 # Whisker-Robot-Project
 
+![IMG_1681](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/7cf7e496-3460-4b91-b3eb-a50f5319ddf9)
 
-![Screenshot from 2023-05-04 15-12-48](https://user-images.githubusercontent.com/39700209/236318854-19b883a5-861f-48e9-bd5c-a984d1751342.png)
-
-
+Background:
 
 ## Interior Camera View
-![image_0](https://user-images.githubusercontent.com/39700209/236319310-ef87984c-bbc2-4645-8a92-429ef181f9a2.jpg)
-
+![membrane](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/be6ac9f2-6f29-4a2f-b720-d957197e6b58)
 
 ## Project Setup
 
-![IMG_20230511_132530](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/cef4c361-4bcb-4727-ab46-828a7d5c4f02)
-
+![IMG_1684](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/dcb398b5-f4dd-4efc-a855-afd3717f94ad)
 
 
 ## Top View
@@ -49,24 +46,22 @@
 
 
 
-## Command to run multiple files in parallel/ to sync cameras/data collection: ####
-
-
-
-# Making use of GNU Parallel command-line tool
-# sudo apt-get install parallel
 
 # Camera 1 (Top Camera)
-python3 real_world_coordinates_cam1.py  #get coordinates
+`python3 real_world_coordinates_cam1.py`  #get coordinates
 
 # Camera 2 (Front Exterior Camera)
-python3 real_world_coordinates_cam2.py  #get coordinates
+`python3 real_world_coordinates_cam2.py`  #get coordinates
 
 # Interior Cam
-python3 interior_camprocessor.py  #collect images
-
-# To sync data collection from all three cameras
-parallel -j 3 python3 ::: real_world_coordinates_cam1.py real_world_coordinates_cam2.py interior_camprocessor.py
+`python3 interior_camprocessor.py`  #collect images
 
 
-### 3 stands for 3 jobs to start simultaneosly/ run concurrently
+## To start the automatic data collection run
+`python3 automatic_data_collection.ipynb`
+
+This above includes everything like show markers, check which camera is what number i.e which port it \
+is connected to.
+
+# Also check out Portfolio Link for this project!:
+https://suzie13.github.io/Sushma_S_Chandra/projects/Whisker%20Robot/
