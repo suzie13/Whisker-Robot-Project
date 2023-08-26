@@ -34,7 +34,6 @@ Background:
 
 ![Screenshot from 2023-05-25 03-02-28](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/1f79e9df-57e9-401e-aa24-b2130fa43ee8)
 
-![Screenshot from 2023-05-25 03-00-30](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/d63b08b4-455d-4610-bf00-a627179d9566)
 
 ![Screenshot from 2023-05-24 20-24-10](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/c87a5836-ffa0-457b-9dae-0f267173b760)
 
@@ -63,5 +62,5 @@ Background:
 This above includes everything like show markers, check which camera is what number i.e which port it \
 is connected to.
 
-# Also check out Portfolio Link for this project!:
+# Portfolio Link for Whisker Robot project!:
 https://suzie13.github.io/Sushma_S_Chandra/projects/Whisker%20Robot/

@@ -7,7 +7,7 @@ import time
 dict_aruco = aruco.Dictionary_get(aruco.DICT_4X4_50)
 parameters = aruco.DetectorParameters_create()
 
-cap = cv2.VideoCapture(8) # Front Exterior Camera
+cap = cv2.VideoCapture(12) # Front Exterior Camera
 # cap = cv2.VideoCapture(6) # Top Camera 
 
 
