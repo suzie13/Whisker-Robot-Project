@@ -44,14 +44,14 @@
 ![Screenshot from 2023-05-23 21-35-02](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/393ff659-fecd-456b-9fd4-af9a6bea8683)
 
 
+<br>
+<br>
 
-
-
-## To start the automatic data collection run
+## To start the Automatic Data Collection run
 `python3 automatic_data_collection.ipynb`
 
-This above includes everything that is required to perform automatic data collection; like connect to the Arduino serial port, <br>
-show markers, check which camera is what number i.e which port it is connected to. In a nutshell, all the required standalone <br>
+This above includes everything that is required to perform automatic data collection; like connect to the Arduino serial port, 
+show markers, check which camera is what number i.e which port it is connected to. <br> In a nutshell, all the required standalone 
 codes from the Data Collection folder for automatic data collection, are used as functions in this code. <br>
 <br>
 <br>
