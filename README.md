@@ -44,16 +44,36 @@
 ![Screenshot from 2023-05-23 21-35-02](https://github.com/suzie13/Whisker-Robot-Project/assets/39700209/393ff659-fecd-456b-9fd4-af9a6bea8683)
 
 
-Explaination of in what order to run the code scripts ...what is there in each folder
-
 
 
 
 ## To start the automatic data collection run
 `python3 automatic_data_collection.ipynb`
 
-This above includes everything like show markers, check which camera is what number i.e which port it \
-is connected to.
+This above includes everything that is required to perform automatic data collection; like connect to the Arduino serial port, <br>
+show markers, check which camera is what number i.e which port it is connected to. In a nutshell, all the required standalone <br>
+codes from the Data Collection folder for automatic data collection, are used as functions in this code. <br>
+<br>
+<br>
+<br>
+
+# Overview
+<br>
+<ul> The "caliberation" folder contains everything that is required to procure the camera matrix and distance coefficient <br>
+values which is used in Data Collection for aruco marker detection. It also contains code to generate aruco marker images. </ul> <br>
+<br>
+<ul> The "Data_Collection" folder contains all the standalone codes used in the automatic data collection process.    </ul> <br>
+<br>
+<ul> The "helper_functions" folder is for codes that can be handy for various tasks. <br>
+It contains crop.py file which is used to crop images, such that the dimensions (of part of the image to keep) <br>
+are taken from the center. This was used to see if edges (in membrane images) played a role in the model learning. <br>
+Turns out edges did play a role. </ul> <br>
+<br>
+<ul> The "ML_algos" folder contains all the machine learning algorithms used in this project. </ul> <br>
+<br>
+<br>
+<br>
+
 
 ## Portfolio Link for Whisker Robot project!:
 https://suzie13.github.io/Sushma_S_Chandra/projects/Whisker%20Robot/
