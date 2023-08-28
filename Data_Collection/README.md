@@ -24,3 +24,22 @@
 
 ## Interior Cam
 `python3 interior_camprocessor.py`  --> collect membrane images <br>
+
+<br>
+<br>
+
+# Supplementary
+<br>
+<br>
+
+## Whisker & Object point of contact using Computer Vision only
+`python3 point_of_contact.py`  --> initial code to find point of contact of object to whisker using pure Computer Vision (no aruco markers <br> or Machine Learning). If the distance between two contours is lower than a certain threshold then it is considered as touching (in contact).<br>
+<br>
+
+## Centroid of object contours
+`python3 realsense_camprocessor.py`  --> find countours of object based on color threshold and find its centroid (was used in an earlier <br> project [Who stole my Pen?]) Link: https://suzie13.github.io/Sushma_S_Chandra/projects/Track_and_Grab_a_Pen/  <br>
+<br>
+
+## xy plotter control using python commands
+`python3 xyplotter_save.ipynb`  --> simple serial port connection; moving x-y plotter using python commands. <br>
+
