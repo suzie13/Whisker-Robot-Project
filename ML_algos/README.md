@@ -34,34 +34,40 @@ data and NaN values. <br>
 2) The CNN classification model for left/right direction prediction is trained on only trustworthy contact data.  <br>
 
 3a) A separate neural network (CNN model in this case) is trained for x-coordinate, y-coordinate of object prediction, trained     <br>
-only on left direction trustworthy contact data.
+only on left direction trustworthy contact data.<br>
+
 b) A separate neural network (CNN model in this case) is trained for x-coordinate, y-coordinate of object prediction, trained     <br>
 only on right direction trustworthy contact data.  <br>
 <br>
 <br>
 
 # Guidelines:
-1) Firstly, run the classification code for contact/non-contact, classification model code for direction, regression model code for x,y coordinates, <br>
-in any order. Each of the model codes saves checkpoints (weights) at regular intervals of epochs. Evaluate the model during training and testing by <br> 
-looking at the accuracy and loss across epochs. Based on the performance pick a checkpoint when the model performs best and is neither underfitting <br>
-nor overfitting. Higher the accuracy and lower the loss indicates better performance. Performing well on training data and bad on test indicates overfitting <br>
-Performing poorly on training usually indicates underfitting.
+1) Firstly, run the classification code for contact/non-contact, classification model code for direction, regression model code for x,y <br>
+coordinates, in any order. <br>
+Each of the model codes saves checkpoints (weights) at regular intervals of epochs. <br>
+Evaluate the model during training and testing by looking at the accuracy and loss across epochs. <br>
+Based on the performance pick a checkpoint when the model performs best and is neither underfitting nor overfitting. Higher the accuracy <br>
+and lower the loss indicates better performance. <br>
+Performing well on training data and bad on test indicates overfitting. <br>
+Performing poorly on training usually indicates underfitting. <br>
 
 2) After having picked checkpoints for each of the 4 neural networks/ ML models, use these in the multimodal code to make the ultimate predictions. <br>
 
 <br>
+<br>
 
 # How to run the code?
+<br>
 
 ## ML model for contact/ non-contact classification:
 
-`python3 CNN_.ipynb`  --> To run the CNN classification code for contact/ non-contact, save checkpoints, and evaluate the model.
+`python3 CNN_classification_contactornot.ipynb`  --> To run the CNN classification code for contact/ non-contact, save checkpoints, and evaluate the model.
 
 ## ML model for left/ right classification:
-`python3 CNN_.ipynb`  --> To run the CNN classification code for left direction/ right direction, save checkpoints, and evaluate the model.
+`python3 CNN_classification_direction.ipynb`  --> To run the CNN classification code for left direction/ right direction, save checkpoints, and evaluate the model.
 
 ## ML model to predict x,y coordinates:
-`python3 CNN_.ipynb`  --> To run the CNN regression code for left direction/ right direction, save checkpoints, and evaluate the model.
+`python3 CNN_regression_coordinates.ipynb`  --> To run the CNN regression code for left direction/ right direction, save checkpoints, and evaluate the model.
 
 ## Multimodal Code:
 `python3 CNN_merge.ipynb`  --> To run the CNN multimodal code.
