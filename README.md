@@ -59,14 +59,14 @@ codes from the Data Collection folder for automatic data collection, are used as
 
 # Overview
 <br>
-<ul> > The "caliberation" folder contains everything that is required to procure the camera matrix and distance coefficient <br>
-values which is used in Data Collection for aruco marker detection. It also contains code to generate aruco marker images. </ul> <br>
-<ul> > The "Data_Collection" folder contains all the standalone codes used in the automatic data collection process.    </ul> <br>
-<ul> > The "helper_functions" folder is for codes that can be handy for various tasks. <br>
+<ul> -> The "caliberation" folder contains everything that is required to procure the camera matrix and distance coefficient 
+values which is used in Data Collection for aruco marker detection. <br> It also contains code to generate aruco marker images. </ul> <br>
+<ul> -> The "Data_Collection" folder contains all the standalone codes used in the automatic data collection process.    </ul> <br>
+<ul> -> The "helper_functions" folder is for codes that can be handy for various tasks. <br>
 It contains crop.py file which is used to crop images, such that the dimensions (of part of the image to keep) <br>
 are taken from the center. This was used to see if edges (in membrane images) played a role in the model learning.
 Turns out edges did play a role. </ul> <br>
-<ul> > The "ML_algos" folder contains all the machine learning algorithms used in this project. </ul> <br>
+<ul> -> The "ML_algos" folder contains all the machine learning algorithms used in this project. </ul> <br>
 <br>
 <br>
 
